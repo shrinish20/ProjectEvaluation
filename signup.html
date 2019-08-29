@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>User SignUp</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+			if($("#text1").val() != $("#text2").val()) {
+			alert("Email id's doesn't match");
+			}
+        
+        }, false);
+
+		function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+		function viewPassword() {
+			var passwordInput = document.getElementById('myInput');
+  			var passStatus = document.getElementById('pass-status');
+			  if (passwordInput.type == 'password') {
+    			passwordInput.type='text';
+    			passStatus.className='fa fa-eye-slash';
+  				}else {
+    			passwordInput.type='password';
+    			passStatus.className='fa fa-eye';
+				  }
+		function validateEmail() {
+			var email = document.getElementById("text1").value
+        var confemail = document.getElementById("text2").value
+        if(email != confemail) {
+            alert('Wrong confirm mail id !');
+        }
+		}
+		}
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <!-- //fonts -->
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- //Font-Awesome-File-Links -->
+	
+	<!-- Google fonts -->
+	<link href="css1?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+	<link href="css1?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+	<!-- Google fonts -->
+		
+</head>
+<!-- //Head -->
+<!-- Body -->
+
+<body>
+    
+<section class="main">
+	<div class="layer">
+		
+		<div class="bottom-grid ">
+				
+				<div class="container h-100">
+						<div class="d-flex justify-content-center h-100">
+						  <div class="searchbar">
+							<input class="search_input" type="text" name="" placeholder="Search...">
+							<a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+						  </div>
+						</div>
+					 </div>
+			
+			<div class="links float-rt">
+				<ul class="links-unordered-list">
+					<li class="active">
+						<a href="index.html" class="">Login</a>
+					</li>					
+					<li class="">
+						<a href="signup.html" class="">SignUp</a>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<div class="content-w3ls">
+			
+			<div class="content-bottom">
+				<form action="index.html" method="post" onsubmit="return validateEmail();">
+					<div class="field-group">
+						<span class="fa fa-user" aria-hidden="true"></span>
+						<div class="wthree-field">
+							<input name="text1" id="text1" type="email" value="" placeholder="Username" required>
+						</div>
+					</div>
+					<div class="field-group">
+							<span class="fa fa-user" aria-hidden="true"></span>
+							<div class="wthree-field">
+								<input name="text2" id="text2" type="email" value="" placeholder="Confirm Username" required>
+							</div>
+						</div>
+					<div class="field-group">
+						<span class="fa fa-lock" aria-hidden="true"></span>
+						<div class="wthree-field">
+							<input name="password" id="myInput" type="Password" placeholder="Password">
+							<i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
+						</div>
+					</div>
+					<div class="wthree-field">
+						<button type="submit" class="btn">Signup</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+		
+    </div>
+</section>
+</body>
+</html>

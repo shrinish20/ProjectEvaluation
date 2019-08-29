@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+    <title>Results</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+       
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+       
+		
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="popper.min.js"></script>
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <!-- //fonts -->
+	<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- //Font-Awesome-File-Links -->
+	
+	<!-- Google fonts -->
+	<link href="css1?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="css1?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+    
+	<!-- Google fonts -->
+<style>
+
+nav > .nav.nav-tabs{
+
+border: none;
+  color:#fff;
+  background:#272e38;
+  border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active {
+border: none;
+  padding: 18px 25px;
+  color:#fff;
+  background:#272e38;
+  border-radius:0;
+}
+
+.table {
+    background:  rgba(72, 72, 76, 0.37);
+    
+}
+
+.tab-content{
+background: #fdfdfd;
+  line-height: 25px;
+  border: 1px solid #ddd;
+  border-top:5px solid #e74c3c;
+  border-bottom:5px solid #e74c3c;
+  padding:30px 25px;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+
+{
+border: none;
+  background: blueviolet;
+  color:#fff;
+  border-radius:0;
+  transition:background 0.20s linear;
+}
+.star-icon {
+    color: #ddd;
+    font-size:17px;
+    position: relative;
+}
+.star-icon.half:before {
+    color: #FDE16D;
+    content: '\2605'; /* Full star in UTF8 */
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+    text-shadow: 0 0 2px rgba(0,0,0,0.7);
+}
+.star-icon.full:before {
+    color: #FDE16D;
+    content: '\2605'; /* Full star in UTF8 */
+    position: absolute;
+    left: 0;
+    text-shadow: 0 0 2px rgba(0,0,0,0.7);
+ }
+ .btn-default {
+   background-color:blueviolet;
+   color:white;
+ }
+ /* .table-condensed {
+   padding:3px;
+ } */
+
+
+</style>
+<script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+       
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+        function drawTable() { 
+            var info = [
+                ['Prasath','Spring','10 days', '4', '<span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon half">☆</span><span class="star-icon">☆</span>'],
+                ['Nishanth', 'NodeJS','8 days','4', '<span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon half">☆</span><span class="star-icon">☆</span>'],
+                ['Hari','ReactJS','10 days', '4', '<span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon half">☆</span><span class="star-icon">☆</span>'],
+                ['Jeeva','AngularJS','10 days', '4', '<span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon half">☆</span><span class="star-icon">☆</span>'],
+                ['Ramesh', 'mongoDB','2 days','4', '<span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon half">☆</span><span class="star-icon">☆</span>'],
+                ['Jayakumar','VeuJS','2 days', '4', '<span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon half">☆</span><span class="star-icon">☆</span>'],
+                ['Isha','Jquery','3 days', '4', '<span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon half">☆</span><span class="star-icon">☆</span>'],
+                ['Ompriyadharshini','AWS','10 days', '4', '<span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon full">☆</span><span class="star-icon half">☆</span><span class="star-icon">☆</span>']
+  
+            ];
+
+            var tableData='<table class="table table-hover table-striped table-dark table-sm" id="myTable"><thead><tr><th>Mentor</th><th>Profile</th><th>Name</th><th>Course</th><th>Duration</th><th>Experience</th><th>Rating</th><th>Action</th></tr><tbody>';
+
+                for(i=0;i<info.length;i++) {
+                    tableData = tableData + '<tr><td><img src="user_icon.jpg" width="48" height="42"><br></td><td><a href="index.html" class="btn btn-default btn-sm" style="font-size: 0.8em;width:9em" role="button">View</a></td>';
+                        for(j=0;j<5;j++) {
+                            tableData = tableData + '<td>'+info[i][j]+'</td>';
+                            // if(j==0)
+                            // {
+                            //     tableData = tableData + '<a href="index.html" class="btn btn-primary btn-sm" style="font-size: 0.8em;width:5em" role="button">Profile</a>';
+                            // }
+                        }
+                        
+
+                    tableData = tableData + '<td><a href="index.html" class="btn btn-default btn-sm" style="width:10em" role="button">Request</a></td></tr>';
+                }
+            tableData = tableData + '</tbody></table>';
+            document.getElementById('demo').innerHTML=tableData;  
+        }  
+
+
+
+</script>
+</head>
+<!-- //Head -->
+<!-- Body -->
+
+<body>
+
+<section class="main">
+	<div class="layer">
+		
+		<div class="bottom-grid ">
+				    <div class="container h-100">
+						<div class="d-flex justify-content-center h-100">
+						  <div class="searchbar">
+							<input class="search_input" type="text" name="" placeholder="Search...">
+							<a href="search_results.html" class="search_icon"><i class="fas fa-search"></i></a>
+						  </div>
+						</div>
+					 </div>
+			
+			<div class="links float-rt">
+				
+				<ul class="links-unordered-list">										
+					<li class="active">
+						<a href="index.html" class="">Login</a>
+					</li>				
+				</ul>
+            </div><br>
+        </div>
+        <br>
+        <div class="container">
+                <div class="row-xs-12">
+                  <div class="col-xs-12 ">
+                    <nav>
+                      <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Search Courses</a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Ongoing Trainings</a>
+                        <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">Completed Trainings</a>
+                      </div>
+                    </nav>
+                   
+                  </div>
+                </div><br>
+                <div class="container table-responsive">
+                        <p id="demo"></p>
+                      <script>drawTable() </script>      
+                      
+                </div>
+                
+                
+          </div>
+        </div>
+  </div>
+
+    </div>
+        
+</section>
+
+</body>
+<!-- //Body -->
+</html>
